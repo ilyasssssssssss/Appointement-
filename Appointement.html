@@ -10,7 +10,7 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Arial', sans-serif;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
         body {
@@ -53,7 +53,7 @@
         }
 
         .nav-links li {
-            margin-left: 15px;
+            margin-left: 30px;
         }
 
         .nav-links a {
@@ -67,9 +67,10 @@
         #appointment-btn {
             background-color: #007bff;
             color: #fff;
-            padding: 35px 20px 35px 20px;
+            padding: 35px 50px 35px 50px;
             text-decoration: none;     
-            margin-right: -12px;   
+            margin-right: -12px;
+            font-size: 16px;   
         }
 
         .appointment-btn:hover {
@@ -86,7 +87,8 @@
 
         .appointment-info {
             flex: 1;
-            max-width: 600px;
+            width: 700px;
+            height: 600px;
         }
 
         .appointment-info h1 {
@@ -104,12 +106,22 @@
             display: flex;
             flex-direction: column;
         }
+        .texts{
+            position: relative;
+            bottom: 11px;
+            left: 13px;
+        }
+        .text1{
+            position: relative;
+            top: 11px;
+            left: 13px;
+        }
 
         .contact-item {
             display: flex;
             align-items: center;
             background-color: #e5f2ff;
-            padding: 15px;
+            padding: 30px;
             border-radius: 5px;
             margin-bottom: 15px;
         }
@@ -127,11 +139,14 @@
 
         .appointment-form {
             flex: 1;
-            max-width: 500px;
+            width: 600px;
+            height: 600px;
             background-color: #e5f2ff;
-            padding: 30px;
+            padding: 90px 50px 60px 50px;
             border-radius: 10px;
-            margin: 32px;           
+            margin: 32px 0px 0px 70px;   
+            position: relative;
+            bottom: 67px;
         }
 
         .appointment-form h2 {
@@ -146,8 +161,7 @@
             
         }
 
-        .form-group input,
-        .form-group select {
+        .form-group input,.form-group select {
             width: 48%;
             height: 50px;
             font-size: 20px;
@@ -234,7 +248,7 @@
                 <li><a href="#">Service</a></li>
                 <li><a href="#">Pages</a></li>
                 <li><a href="#">Contact</a></li>
-                <li><a href="#" id="appointment-btn">Appointment</a></li>
+                <li><a href="#" id="appointment-btn">Appointment <span><i class="fa-sharp fa-solid fa-arrow-right" style="color: #ffffff;"></i></span></a></li>
             </ul>
         </nav>
     </header>
@@ -249,22 +263,21 @@
                     <div class="contact-item">
                         <i class="fas fa-phone-alt"></i>
                         <div>
-                            <p>Call Us Now</p>
-                            <h4>+012 345 6789</h4>
+                            <p class="text1">Call Us Now</p>
+                            <h4 class="texts">+012 345 6789</h4>
                         </div>
                     </div>
                     <div class="contact-item">
                         <i class="fas fa-envelope"></i>
                         <div>
-                            <p>Mail Us Now</p>
-                            <h4>info@example.com</h4>
+                            <p class="text1">Mail Us Now</p>
+                            <h4 class="texts">info@example.com</h4>
                         </div>
                     </div>
                 </div>
             </div>
 
             <div class="appointment-form">
-                <h2>Appointment</h2>
                 <form action="#">
                     <div class="form-group">
                         <input type="text" placeholder="Your Name">
