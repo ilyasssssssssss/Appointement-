@@ -1,282 +1,298 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Appointment Form</title>
-  <Style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment Form</title>
+    <style>
         * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
-  }
-  
-  body {
-    background-color: #f5f7fa;
-    color: #333;
-    line-height: 1.6;
-  }
-  
-  .container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: flex-start;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-  
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #fff;
-    padding: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #007bff;
-  }
-  
-  .nav-links {
-    list-style: none;
-    display: flex;
-  }
-  
-  .nav-links li {
-    margin: 0 15px;
-  }
-  
-  .nav-links a {
-    text-decoration: none;
-    color: #333;
-    font-weight: 600;
-  }
-  
-  .appointment-btn {
-    background-color: #007bff;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-  }
-  
-  .appointment-btn:hover {
-    background-color: #0056b3;
-  }
-  
-  /* Appointment Section */
-  .appointment-section {
-    display: flex;
-    justify-content: center;
-    background-color: #f5f7fa;
-    padding: 50px 0;
-  }
-  
-  .appointment-info {
-    flex: 1;
-    max-width: 600px;
-  }
-  
-  .appointment-info h1 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-  }
-  
-  .appointment-info p {
-    font-size: 1rem;
-    margin-bottom: 30px;
-    color: #666;
-  }
-  
-  .contact-info {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .contact-item {
-    display: flex;
-    align-items: center;
-    background-color: #e5f2ff;
-    padding: 15px;
-    border-radius: 5px;
-    margin-bottom: 15px;
-  }
-  
-  .contact-item i {
-    font-size: 2rem;
-    color: #007bff;
-    margin-right: 15px;
-  }
-  
-  .contact-item h4 {
-    margin: 0;
-    font-size: 1.25rem;
-  }
-  
-  .appointment-form {
-    flex: 1;
-    max-width: 500px;
-    background-color: #e5f2ff;
-    padding: 30px;
-    border-radius: 10px;
-  }
-  
-  .appointment-form h2 {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-  }
-  
-  .form-group {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
-  }
-  
-  .form-group input, .form-group select {
-    width: 48%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  textarea {
-    width: 100%;
-    height: 100px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-bottom: 20px;
-  }
-  
-  button {
-    width: 100%;
-    background-color: #007bff;
-    color: white;
-    padding: 15px;
-    border: none;
-    border-radius: 5px;
-    font-size: 1.1rem;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #0056b3;
-  }
-  
-  /* Footer */
-  footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #007bff;
-    color: white;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-  }
-  
-  /* Responsive Styles */
-  @media (max-width: 768px) {
-    .container {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .appointment-info, .appointment-form {
-      max-width: 100%;
-    }
-  
-    .navbar {
-      flex-direction: column;
-    }
-  
-    .nav-links {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .nav-links li {
-      margin: 10px;
-    }
-    }
-  </Style>
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+            max-width: 1200px;
+            margin:auto;
+            padding: 20px;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #fff;
+            padding: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            font-size: 40px;
+            font-weight: bold;
+            color: #007bff;
+        }
+        .klinik{
+            font-size: 40px;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin-left: 15px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: rgb(165, 168, 178);
+            font-weight: 600;
+            font-size: 20px;
+            
+        }
+
+        #appointment-btn {
+            background-color: #007bff;
+            color: #fff;
+            padding: 35px 20px 35px 20px;
+            text-decoration: none;     
+            margin-right: -12px;   
+        }
+
+        .appointment-btn:hover {
+            background-color: #0056b3;
+        }
+
+        /* Appointment Section */
+        .appointment-section {
+            display: flex;
+            justify-content: center;
+            background-color: #f5f7fa;
+            padding: 50px 0;
+        }
+
+        .appointment-info {
+            flex: 1;
+            max-width: 600px;
+        }
+
+        .appointment-info h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .appointment-info p {
+            font-size: 1rem;
+            margin-bottom: 30px;
+            color: #666;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            background-color: #e5f2ff;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+
+        .contact-item i {
+            font-size: 2rem;
+            color: #007bff;
+            margin-right: 15px;
+        }
+
+        .contact-item h4 {
+            margin: 0;
+            font-size: 1.25rem;
+        }
+
+        .appointment-form {
+            flex: 1;
+            max-width: 500px;
+            background-color: #e5f2ff;
+            padding: 30px;
+            border-radius: 10px;
+            margin: 32px;           
+        }
+
+        .appointment-form h2 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 48%;
+            height: 50px;
+            font-size: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        textarea {
+            width: 100%;
+            height: 150px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            font-size: 20px;
+        }
+
+        button {
+            width: 100%;
+            background-color: #007bff;
+            color: white;
+            padding: 15px;
+            border: none;
+            border-radius: 5px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+       
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #007bff;
+            color: white;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        } 
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .appointment-info,
+            .appointment-form {
+                max-width: 100%;
+                width: 100%;
+            }
+
+            .navbar {
+                flex-direction: column;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .nav-links li {
+                margin: 10px;
+            }
+        }
+    </style>
 </head>
+
 <body>
 
-  <header>
-    <nav class="navbar">
-      <div class="logo">
-        <i class="fas fa-hospital-symbol"></i> Klinik
-      </div>
-      <ul class="nav-links">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Service</a></li>
-        <li><a href="#">Pages</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-      <a href="#" class="appointment-btn">Appointment</a>
-    </nav>
-  </header>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <i class="fas fa-hospital-symbol"></i> <span class="klinik">Klinik</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Service</a></li>
+                <li><a href="#">Pages</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#" id="appointment-btn">Appointment</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <section class="appointment-section">
-    <div class="container">
-      <div class="appointment-info">
-        <h1>Make An Appointment To Visit Our Doctor</h1>
-        <p>Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet.</p>
-        <div class="contact-info">
-          <div class="contact-item">
-            <i class="fas fa-phone-alt"></i>
-            <div>
-              <p>Call Us Now</p>
-              <h4>+012 345 6789</h4>
+    <section class="appointment-section">
+        <div class="container">
+            <div class="appointment-info">
+                <h1>Make An Appointment To Visit Our Doctor</h1>
+                <p>Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat
+                    ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet.</p>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <div>
+                            <p>Call Us Now</p>
+                            <h4>+012 345 6789</h4>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <p>Mail Us Now</p>
+                            <h4>info@example.com</h4>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="contact-item">
-            <i class="fas fa-envelope"></i>
-            <div>
-              <p>Mail Us Now</p>
-              <h4>info@example.com</h4>
+
+            <div class="appointment-form">
+                <h2>Appointment</h2>
+                <form action="#">
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Name">
+                        <input type="email" placeholder="Your Email">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Mobile">
+                        <select>
+                            <option>Choose Doctor</option>
+                            <option>Doctor A</option>
+                            <option>Doctor B</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <input type="date" placeholder="Choose Date">
+                        <input type="date" placeholder="Choose Date">
+                    </div>
+                    <textarea placeholder="Describe your problem"></textarea>
+                    <button class="btn" type="submit">Book Appointment</button>
+                </form>
             </div>
-          </div>
         </div>
-      </div>
+    </section>
 
-      <div class="appointment-form">
-        <h2>Appointment</h2>
-        <form action="#">
-          <div class="form-group">
-            <input type="text" placeholder="Your Name">
-            <input type="email" placeholder="Your Email">
-          </div>
-          <div class="form-group">
-            <input type="text" placeholder="Your Mobile">
-            <select>
-              <option>Choose Doctor</option>
-              <option>Doctor A</option>
-              <option>Doctor B</option>
-              <option>Doctor C</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <input type="date" placeholder="Choose Date">
-            <input type="date" placeholder="Choose Date">
-          </div>
-          <textarea placeholder="Describe your problem"></textarea>
-          <button type="submit">Book Appointment</button>
-        </form>
-      </div>
-    </div>
-  </section>
-
-  <footer>
+    <footer class="footer">
     <p>&copy; 2024 Klinik. All Rights Reserved.</p>
   </footer>
-
+  <script src="https://kit.fontawesome.com/463c2a14cc.js" crossorigin="anonymous"></script>
 </body>
+
 </html>
